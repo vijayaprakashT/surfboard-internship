@@ -12,7 +12,7 @@ Its mainly used for plain text formats and you can focus on content rather than 
 1. Advantages:
             1.Its platform independent language.
 
-            2. you can able to convert into pdf to upload it in website and conv               ert into html format.
+            2. you can able to convert into pdf to upload it in website and convert into html format.
 
 2.Disadvantages:
             1.limited designs.
