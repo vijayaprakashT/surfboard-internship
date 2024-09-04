@@ -1,2 +1,3 @@
+
 # SEPT 2
 It was a wonderful day to start my career at surfboard as a intern.I met huskin bro and he was my internship program mentor.first day of class he taught about the skills which is categorized into two types simple and complex and principles of problem solving . In the end we had a debate of what will you do if you have 100 crs. i met new people and had a interact with them.They shared about the workflow of the company .
