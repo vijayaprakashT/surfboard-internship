@@ -14,10 +14,10 @@ we have discussed some logical solving problems based on real scenario and solvi
 > In javascript ,today i have learned let, var,const and what is class,array ,object
 
 ### class:
-         1.class is like a creating a object  based on that you can perform multiple functions  atlast you can using ex: create.objname= new create()
+         1.class is like a creating a object  based on that you can perform multiple functions  atlast you can call with the help of objectname using calling method ex: create.objname= new create()
 
 #### Array:
-        1. its a non primitive datatype in javascript where you can store any data type without specify and perform the function.
+        1.In array you can store  a non primitive datatype in javascript  without specifying the datatype and perform the function.
 
 ##### Object :
          1. object is like based on object we will create states and behaviors .
