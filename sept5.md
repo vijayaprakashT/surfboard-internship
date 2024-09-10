@@ -4,7 +4,7 @@
 ## internship day - 4
 
 Today we have learned about propositions and revised the topics from yesterday.
-In prepositions, its kind of true or false format for example: 
+In propositions, its kind of true or false format for example: 
                                                              1.when sun is getting raise in the morning you will get warm.
                                                              2.car is parked under the sun
                                                              3.my car is warm
@@ -64,5 +64,18 @@ berlin bro has given some topics yesterday to study  so i didnt complete that. h
 #####  ARRAYS:
        
         1.Array.length():
-                    
+                    1. Its used for finding length of the array 
+        2.Array.prototype.map():
+                    1.Its used for create a new array for result and map is used for callback the function with condition and calls each every element in the array and it doesnt modify the array elements
+                    and result stored in new array.
+        3.Array.Filter():
+                    1.Its used for filtering out elements from array with given condition .
+        4.Array.some():
+                    1.Its used for checking the given  condition  atleast it will check one element is true or false
+                    based on the condition .if its not return false or else true.
+
+        5.Array.foreach():
+                    1.Its used for check each and every element based on the condition given even if it fails it doesnt stop it will check every element in given array regardless whether its true or not.
+        6.Array.find():
+                    1.  It returns the first element which satisfying the condition and it will not return more than one element .if its not satisfying the condition it return  undefined.
         
