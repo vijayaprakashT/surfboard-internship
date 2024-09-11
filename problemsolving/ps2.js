@@ -52,8 +52,9 @@ console.log(multi); // printing the update one after multiplied with  2
        // used reduce() method for reducing the values to single digit and used parseInt pass value as string and return as integer and returning the value
     console.log( "reduce to single digit :",reducedArray); // printing the array after reduce to single digit
   
-       if (JSON.stringify(reducedArray) === JSON.stringify(removelastdigit)) {
-        console.log("Valid");  // using json.stringify() method to converting the array format to string to check whether its valid or not
+    //    if (JSON.stringify(reducedArray) === JSON.stringify(removelastdigit)) 
+    if (reducedArray.toString() === removelastdigit.toString()) {
+        console.log("Valid");  // using toString() method to converting the number format to string to check whether its valid or not
     } else {
         console.log("Invalid");
     }
