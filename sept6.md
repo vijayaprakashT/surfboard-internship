@@ -30,6 +30,27 @@
 
         console.log(elements.split(",")) ;
 
+    5.Array.splice():
+        1.used for adding and removing  elements 
+        example:
+             let num =[1,2,3,4];
+             num.splice(1,3);  2,3,4
+             console.num();
+    6.Array.slice():
+        1. used for implement start and end to execute.
+        example:
+           let num =[1,2,3,4];
+             num.slice(1,3);  2,3,4
+             console.num();
+    
+    7.Array.flat():
+        1.creates a new array and concatenate all the sub arrays into array 
+        2.sub array depth index starts from 1
+        example:
+        const = [1,2[3,4[5,6]]]
+        console.log
+
+
     > after learned all this topics and i tried to implement in simple problem solving question in w3 resources
     and i have learned some commands used in terminals.
 
@@ -53,5 +74,5 @@
              16. L -> move to bottom .
              17. dd -> delete current line.
 
-NOTE: using vim editor we cant able to delete a file but we can do operations like editing the file .
+NOTE: using vim editor we can't able to delete a file but we can do operations like editing the file .
 

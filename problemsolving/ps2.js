@@ -25,7 +25,7 @@ function removeLastDigit(numbertocheck){   // created function name called remov
 // Loop through the array and remove the last digit from each number
 const removelastdigit = numbertocheck.map((removelastdigit) => removelastdigit % 10); // used arraymap method  to remove last digit and we will get the last digit divided by 10
 
-console.log("removedlast digit number:", removelastdigit);// printing the last digit
+ console.log("removedlast digit number:", removelastdigit);// printing the last digit
 
  for (let i = 0; i < numbertocheck.length; i++) {  // used for loop condition to check the array length and  updating the array after removing last digit and using math.floor round of the long values
      numbertocheck[i] = Math.floor(numbertocheck[i] / 10); // Divide by 10 and update the array
@@ -35,13 +35,8 @@ console.log("removedlast digit number:", removelastdigit);// printing the last d
 console.log(numbertocheck);// Output the updated array
 
 
-const rev = numbertocheck.reverse();// here we have used reverse method to reverse the array elements
-console.log(rev);  //printing the rev
-let multiply = 2; // declare and intialize the variable for next iteration
-
-let multi = rev.map(rev => rev * multiply); // using map to multiply the rev array elements with 2
-
-console.log(multi); // printing the update one after multiplied with  2
+let multi = numbertocheck.map(num => num * 2); 
+    console.log("Multiplied by 2:", multi);
 
   const reducedArray = multi.map(num => {  // we have used reduce() method to reduce to single digit of each long values in array
         while (num > 9) {
