@@ -30,7 +30,9 @@ function maximum(arr){ // created function and named it as maximum
     
   }
   console.log("greatest element in the array:") // printing these lines
-  console.log(maximum([1,10,3,4,5,6])); //  calling back the function and implement the values in array format.
+  //console.log(maximum([1,10,3,4,5,6])); //  calling back the function and implement the values in array format.
+
+  console.log(maximum([1,10,13,4,5,6]));
   
   
        
