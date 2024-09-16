@@ -73,8 +73,8 @@
   console.log("decoded message:" + decode)
   
   
-STEPS TO SOLVE:
-             1. start 
+       1.STEPS TO SOLVE:
+             1. start.
              2. create function and set name  decodeMorse and pass morseCode.
              3. inside the function set ref and intialize morse code symbols for alphabets with alphabets.
              4.set result.
