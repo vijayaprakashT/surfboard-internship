@@ -12,6 +12,7 @@
 
 ## CODE:
 
+```
 function decodeMorse(morseCode) {
     let ref = { 
       '.-':     'a',
@@ -71,7 +72,8 @@ function decodeMorse(morseCode) {
   console.log(morseCode);
   let decode = decodeMorse(morseCode);
   console.log("decoded message:" + decode)
-
+  
+```
    
 
   
