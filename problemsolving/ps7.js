@@ -46,7 +46,7 @@ function decodeMorse(morseCode) {
       '-----':  '0',
     };
     let result = '';
-    let code = morseCode.split('   '); 
+    let code = morseCode.split('   ');  
   
     code.forEach(word => {
       let symbols = word.split(' '); 
