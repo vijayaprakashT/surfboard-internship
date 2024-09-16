@@ -8,7 +8,7 @@
          3.with all this condition you should shift all needles from one condition to another condition.
 
 
-1.STEPS TO SOLVE :
+         1.STEPS TO SOLVE :
             1.from needle 1 take the topmost disk(1) and shift it to 3rd needle.
             2.take the next topmost disk(2) and shift it to needle 2.
             3.take the topmost disk(1) from needle 3 and shift it to disk 2. place it above disk (2).
@@ -29,5 +29,7 @@
             18.from needle 3 take topmost disk (1) shift to needle 1.
             19.from needle 3 take topmost disk (2). shift it to needle 3 and place it above disk 3 and 4.
             20.from needle 1.take disk 1 shift it to needle 2.
+
+            
 
 conclusion:  finally we have shifted all disk to another needle which satisfying the conditions.
