@@ -19,12 +19,11 @@
 let i = 'Abraham' // we assigned a value = abraham to variable i
 console.log(i); // printing the assigned value which is in i variable
 
-//   i = 'surfboard' + i; // now we have created a variable b and assigned value for b and  we have used concatenate "+" to add surfboard with assigned value of i
-// console.log(i);// printing the assign value in b
 
 for(let w = 0 ; w < 5 ; w++){ 
-    console.log(i);
-    i = 'surfboard  ' + i; // now we have created a variable b and assigned value for b and  we have used concatenate "+" to add surfboard with assigned value of i
- // we have used  for loop condition to print i value 5 times  
+    
+    i = 'surfboard  ' + i; //   we are updating and  used concatenate "+" to add surfboard with assigned value of i
+ // we have used  for loop condition to print i value 5 times  . in this surfboard will print each time till it reaches 5 
+ //example s,ss,ssss... and assigned value of i until it reaches 5 count.
     console.log(i);
 }
