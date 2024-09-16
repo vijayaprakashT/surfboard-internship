@@ -12,9 +12,7 @@
 
 ## CODE:
 
----
-
-         function decodeMorse(morseCode) {
+function decodeMorse(morseCode) {
     let ref = { 
       '.-':     'a',
       '-...':   'b',
@@ -62,24 +60,23 @@
         if (ref[symbol] !== undefined) {
           result += ref[symbol]; 
         }
-      });
-      result += ' ';
+      }); result += ' ';
     });
   
     return result.trim(); 
   }
-   let message = ";: :;;; ;:; ;: ;;;; ;: ::"; 
-   let morseCode = message.replace(/;/g, ".").replace(/:/g, "-");
-   console.log(morseCode);.
-   let decode = decodeMorse(morseCode);
-   console.log("decoded message:" + decode)
----
+  
+  let message = ";: :;;; ;:; ;: ;;;; ;: ::"; 
+  let morseCode = message.replace(/;/g, ".").replace(/:/g, "-");
+  console.log(morseCode);
+  let decode = decodeMorse(morseCode);
+  console.log("decoded message:" + decode)
 
    
 
   
   
-       1.STEPS TO SOLVE:
+        1.STEPS TO SOLVE:
              1. start.
              2. create function and set name  decodeMorse and pass morseCode.
              3. inside the function set ref and intialize morse code symbols for alphabets with alphabets.
