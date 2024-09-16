@@ -65,12 +65,15 @@
   
     return result.trim(); 
   }
-  
-   let message = ";: :;;; ;:; ;: ;;;; ;: ::"; .
-   let morseCode = message.replace(/;/g, ".").replace(/:/g, "-");.
+   let message = ";: :;;; ;:; ;: ;;;; ;: ::"; 
+   let morseCode = message.replace(/;/g, ".").replace(/:/g, "-");
    console.log(morseCode);.
-   let decode = decodeMorse(morseCode);.
-   console.log("decoded message:" + decode).
+   let decode = decodeMorse(morseCode);
+   console.log("decoded message:" + decode)
+
+
+   
+   
   
   
        1.STEPS TO SOLVE:
