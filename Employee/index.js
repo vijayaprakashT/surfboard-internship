@@ -87,11 +87,11 @@ app.patch('/update' , function(request,response){
 
     const foundData = dataBase.find((employee) => employee.empId == data.empId);
 
-    if(foundData.length == 0 && foundData == null){
+    if(foundData == undefined ){
         return response.status(400).send({status: 'ERROR', message : " invalid ID"   });
     }
 
-    if(foundData.length > 0){
+    if(foundData != undefined){
          if(data.name){
             foundData.name = data.name;
          }
@@ -122,10 +122,11 @@ app.put('/updateAll' ,  function(request,response){
     const foundId = dataBase.find((employee) => employee.empId == up_Date.empId)
 
 
-    if (foundId == null) {
+    if (foundId == undefined) {
         return response.status(400).send({  status: 'ERROR',  message: 'Id is required' });
     }
 
+if(foundId){
         let update = {
         name : up_Date.name, 
         age : up_Date.age,
@@ -133,9 +134,10 @@ app.put('/updateAll' ,  function(request,response){
 }
     let find = dataBase.indexOf(foundId)
     dataBase.splice(find , 1, update)
+
     return response.status(200).send({status: 'SUCCESS', message : " DATA UPDATED"  , foundId : dataBase  });
     
-     
+}   
 
  
  })
