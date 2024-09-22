@@ -123,7 +123,7 @@ app.put('/updateAll' ,  function(request,response){
 
 
     if (foundId == undefined) {
-        return response.status(400).send({  status: 'ERROR',  message: 'Id is required' });
+        return response.status(400).send({  status: 'ERROR',  message: 'invalid id' });
     }
 
 if(foundId){
@@ -137,9 +137,30 @@ if(foundId){
 
     return response.status(200).send({status: 'SUCCESS', message : " DATA UPDATED"  , foundId : dataBase  });
     
-}   
+} 
 
  
+ })
+
+ app.delete('/delete' , function(request,response){
+     const dataBase = empStorage;
+
+     const data = request.body
+
+     const foundId = dataBase.find((employee) => employee.empId == data.empId)
+
+     if(foundId==undefined){
+            return response.status(400).send({  status: 'ERROR',  message: 'invalid id' });
+        }
+        
+    if(foundId){
+
+        const deletion = data.indexOf(foundId);
+    
+        data.splice(deletion,1)
+    }
+    return response.status(200).send({status: 'SUCCESS', message : " DATA DELETED"  , foundId : dataBase  });
+
  })
 
 
