@@ -2,9 +2,11 @@
 
 
 ## INTERNSHIP PROGRAM :
+
            In kowsik bro class . we have discussed about the last class task which he gave and after this we have discussed about the programming language and language .
 
            we get to know that we have common in both language there are :
+
                           1.literature
                           2.alphabets
                           3.grammer.
@@ -17,6 +19,7 @@
           computer are doing what we are instructing to them and it perform untill we get to used its useless.computer are always dumb untill we get to use it for purpose.
 
 ### PROBLEMS DISCUSSED:
+
         1.QUESTION 1:
                  1.start 
                  2.set name = surfboard.

@@ -1,0 +1,4 @@
+# SEPT 20
+
+## SERVER SIDE RENDERING:
+          1. 

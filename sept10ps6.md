@@ -2,31 +2,33 @@
 
 ## PROBLEM SOLVE 6
 
-### CODE:
-        1. function gcd(a,b){
-            let common ;
-            for(let i = 0 ; i <= a && i < =b ; i++){
-                if(a%i==0 && b%i==0){
-                    common = i;
-                }
-            }
-            return common;
-        }
 
-        let a =4;
-        let b = 6;
-        let result = gcd(a,b);
-        console.log(result);
+During my internship, my mentor  given  problem-solving tasks to improve my logical thinking and programming skills. one of the problem in pdf is to write a program to calculate the Greatest Common Divisor (GCD) of two numbers using a basic approach.
 
-    2.ALGORITHM:
-            1.create a function and set name gcd.
-            2.inside a function declare var name and set common.
-            3.use for loop condition to execute block number of times 
-            4.inside loop condition intialize and declare i = 0 and check a and b greater than or equal to 0 use AND operator because it has to satisfy both condition.
-            5.inside for loop use if condition . 
-            6.if for loop satisfy it will enter into if condition and check a and b % i == 0.
-            7.if condition satisfy inide the condition store the i value into common.
-            8.return common.
-            9.initialize and declare variable for a  = 4 and b = 6.
-            10.call back the function and store this one variable and set result.
-            11.print result. 
+The goal was to create a function that finds the GCD of two numbers, a and b. The GCD is the largest positive integer that divides both numbers without leaving a remainder.
+
+CONSTRAINTS: computer doesnt know the multiplication . computer only knows about addition so based on that we have to write a algorithm 
+
+lets breakdown the problem:
+
+                1.create a function gcd(a, b) to accept two numbers as input.
+                2.Use a loop to iterate through numbers from 1 to the smaller of a and b.
+                3.Check divisibility of both numbers by each number in the loop using the modulus operator (%).
+                4.Update the greatest common divisor if both a and b are divisible by the current number.
+                5.Return the largest common divisor after the loop completes.
+             
+
+Initially, I had some trouble structuring the logic to solve this problem, as finding the greatest divisor of two numbers can be confusing. However, after researching different methods for solving the GCD, I came up with new approach, which I implemented successfully. The task helped me understand how to iterate through numbers and check for divisibility, improving my understanding of loops and conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+

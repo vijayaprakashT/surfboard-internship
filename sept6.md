@@ -3,8 +3,10 @@
 
 ## ARRAYS:
       1.Array.findindex():
+
                 1.findindex() method is used for find the index which satisfying the condition .if it satisfies it return true or else it return -1.
       2.Array.join():
+
                 1.join() is used for create  and returns new string by concatenating all the elements in array separated by commas or specified separator string
 
                 2.example:
@@ -14,6 +16,7 @@
 
 
      3.Array.concat():
+
               1.used to merge two or more array   
               example:
 
@@ -23,6 +26,7 @@
               const arr = elements.concat(element) ;
 
     4.Array.string.split():
+
         1.split() method is used to divide string into substring based on specified separator and output in array format.
         example:
 
@@ -31,12 +35,15 @@
         console.log(elements.split(",")) ;
 
     5.Array.splice():
+
         1.used for adding and removing  elements 
         example:
              let num =[1,2,3,4];
              num.splice(1,3);  2,3,4
              console.num();
+
     6.Array.slice():
+
         1. used for implement start and end to execute.
         example:
            let num =[1,2,3,4];
@@ -44,6 +51,7 @@
              console.num();
     
     7.Array.flat():
+
         1.creates a new array and concatenate all the sub arrays into array 
         2.sub array depth index starts from 1
         example:
@@ -55,7 +63,9 @@
     and i have learned some commands used in terminals.
 
 ### COMMANDS:
+
          1.some of the commands used in terminal:
+         
              1. :E -> used for delete a file.
              2.:cd -> command.
              3.:saveas -> saving file.
