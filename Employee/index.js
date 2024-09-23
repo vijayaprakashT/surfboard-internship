@@ -87,60 +87,29 @@ app.patch('/update' , function(request,response){
 
     const foundData = dataBase.find((employee) => employee.empId == data.empId);
 
-    if(foundData == undefined ){
+    if(!foundData ){
         return response.status(400).send({status: 'ERROR', message : " invalid ID"   });
     }
-
-    if(foundData != undefined){
-         if(data.name){
+    // const eligible = dataBase.filter((employee) => employee.age >= 18);
+    // // if(eligible != data.age){
+    // //      return response.status(400).send({status: 'ERROR', message : "enter age above 18 and equal to 18"   });
+    // //  }
+    if(data.name){
             foundData.name = data.name;
          }
-         if(data.age){
+         
+          if(data.age ){
             foundData.age= data.age;
          }
 
          if(data.gender){
             foundData.gender = data.gender;
-         }
-      
-         
+         }        
          
          return response.send({status:'SUCCESS',message:"Emp data found", foundData : data});
-    }
-
-
 
 })
 
-app.put('/updateAll' ,  function(request,response){
-
-    const dataBase = empStorage;
-
-    const up_Date= request.body;
-    console.log("Request Body: ", up_Date); 
-
-    const foundId = dataBase.find((employee) => employee.empId == up_Date.empId)
-
-
-    if (foundId == undefined) {
-        return response.status(400).send({  status: 'ERROR',  message: 'invalid id' });
-    }
-
-if(foundId){
-        let update = {
-        name : up_Date.name, 
-        age : up_Date.age,
-        gender : up_Date.gender,
-}
-    let find = dataBase.indexOf(foundId)
-    dataBase.splice(find , 1, update)
-
-    return response.status(200).send({status: 'SUCCESS', message : " DATA UPDATED"  , foundId : dataBase  });
-    
-} 
-
- 
- })
 
  app.delete('/delete' , function(request,response){
      const dataBase = empStorage;
@@ -149,7 +118,7 @@ if(foundId){
 
      const foundId = dataBase.find((employee) => employee.empId == data.empId)
 
-     if(foundId==undefined){
+     if(foundId == undefined){
             return response.status(400).send({  status: 'ERROR',  message: 'invalid id' });
         }
         
