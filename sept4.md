@@ -47,15 +47,15 @@ lets get into the each principles for problem solving:
 
 I have learned about the let , var , const in javascript.
 
-1.VAR:
+1.**VAR**:
        1.If you create a variable outside of a function, you can use it anywhere in your code.
        2.If you create a variable inside a function, you can only use it within that function.
 
-2.LET:
+2.**LET**:
      1.The variable is only available inside the block {} where you define it.
      2. It  has block scope.
 
-3.CONST :
+3.**CONST** :
       1. using const once you assigned a value for that you cant able to reassign the value.
        
          

@@ -45,27 +45,45 @@ app.post('/create', (request, response) => {
 
 });
 
+app.get('/getAll', function (request, response) {
+    const dataBase = empStorage
 
-app.get('/getAll', function (request, response)   {
+    const data = request.body
 
-    console.log(request.body); 
-    return response.status(200).send({status: 'SUCCESS', data: empStorage});
+
+    const names = dataBase.map(employee => employee.name); 
+    const sortedNames = names.sort(); 
+    console.log(sortedNames); 
+    
+const getEmployDtls=sortedNames.map((v)=>dataBase.find((employee) => employee.name == v))
+console.log('getEmployDtls==============>>>',getEmployDtls)
+    const dataOrder = dataBase.find((employee) => employee.name == sortedNames.name);
+     
+ if(dataOrder == undefined){
+    return response.status(400).send({ status: 'ERROR', message :'invalid' });
+ }
+
+ if(dataOrder){
+    return response.send( {   status:'SUCCESS',   message:" found", employee :dataOrder });
+ }
+    
+   
 });
+
+ // return response.status(200).send({ status: 'SUCCESS', data: sortedNames });
 
 
 app.get('/get' , function(request ,response){
   
     const data = empStorage;
-   
-    const emp = request.body;
+
+     const emp = request.body;
 
     console.log(emp);
 
     if(emp.empId == null){
-      
-        return response.status(400).send({status: 'ERROR', message : " ID is required "});
-
-    }
+      return response.status(400).send({status: 'ERROR', message : " ID is required "});
+ }
 
    const foundDetails = data.filter((employee) =>employee.empId == emp.empId)
 
@@ -73,10 +91,11 @@ app.get('/get' , function(request ,response){
 
    if(foundDetails.length == 0   ) {
 
-    return response.status(400).send({status: 'ERROR', message : " invalid user"   });
+  return response.status(400).send({status: 'ERROR', message : " invalid user"   });
 
-   }
-   return response.send({status:'SUCCESS',message:"Emp data found", foundDetails : data});
+}
+   return response.send( {   status:'SUCCESS',   message:"Emp data found",    foundDetails });
+
 })
 
 
@@ -85,57 +104,63 @@ app.patch('/update' , function(request,response){
     const dataBase = empStorage;
     const data = request.body;
 
-    const foundData = dataBase.find((employee) => employee.empId == data.empId);
+    const Data = dataBase.find((employee) => employee.empId == data.empId);
 
-    if(!foundData ){
+    if(Data == undefined){
         return response.status(400).send({status: 'ERROR', message : " invalid ID"   });
     }
-    // const eligible = dataBase.filter((employee) => employee.age >= 18);
-    // // if(eligible != data.age){
-    // //      return response.status(400).send({status: 'ERROR', message : "enter age above 18 and equal to 18"   });
-    // //  }
+    
     if(data.name){
-            foundData.name = data.name;
+            Data.name = data.name;
          }
          
           if(data.age ){
-            foundData.age= data.age;
+            Data.age= data.age;
          }
 
          if(data.gender){
-            foundData.gender = data.gender;
+            Data.gender = data.gender;
          }        
          
-         return response.send({status:'SUCCESS',message:"Emp data found", foundData : data});
+         return response.send({status:'SUCCESS',message:"Emp data found", Data : data});
 
 })
 
+app.delete('/del' , function(request,response){
 
- app.delete('/delete' , function(request,response){
-     const dataBase = empStorage;
+      const dataBase = empStorage
 
-     const data = request.body
+      const data = request.body
+      console.log("========>" , data)
 
-     const foundId = dataBase.find((employee) => employee.empId == data.empId)
+      const Data = dataBase.find((employee) => employee.empId == data.empId)
 
-     if(foundId == undefined){
-            return response.status(400).send({  status: 'ERROR',  message: 'invalid id' });
-        }
-        
-    if(foundId){
+      if(Data == undefined){
 
-        const deletion = data.indexOf(foundId);
+        return response.status(400).send({status: 'ERROR', message : " invalid ID"   });
+
+      }
+
+      if(Data ){
+
+        const deletion = dataBase.indexOf(Data)
+        dataBase.splice(deletion,1) // start , delcount
+
+      return response.status(400).send ({status:'SUCCESS', message:" DATA DELETED" ,Data : data})
+
+      }
     
-        data.splice(deletion,1)
-    }
-    return response.status(200).send({status: 'SUCCESS', message : " DATA DELETED"  , foundId : dataBase  });
-
- })
-
-
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port `);
 });
 
+// const eligible = dataBase.filter((employee) => employee.age >= 18);
+    // // if(eligible != data.age){
+    // //      return response.status(400).send({status: 'ERROR', message : "enter age above 18 and equal to 18"   });
+    // //  }  have to use in create (post method)
+
+
+     // const sortedData = empStorage.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
