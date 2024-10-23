@@ -21,13 +21,13 @@
 
 3.Replace the altered symbols in the input message with proper Morse code symbols.Decrypt the Morse code into letters by mapping the Morse patterns to their corresponding alphabets.
 
-1.STEPS:
+1.**STEPS**:
    1.The first task was to replace the semicolons (;) with dots (.) and the colons (:) with dashes (_). for this i have used replace method satisfying the constraints.
 
    2.The second part of the problem was to take this Morse code and map it to the corresponding alphabet. For this, I needed to use a Morse code dictionary, which contains mappings of Morse code patterns to letters.
 
 
-1.CHALLENGES:
+1.**CHALLENGES**:
      Initially, understanding the replacement method took time because it wasn’t immediately clear how to approach converting non-standard Morse symbols back into standard dots and dashes. I spent time researching on Google and found various methods to handle string replacements and Morse code decryption.
 
 
