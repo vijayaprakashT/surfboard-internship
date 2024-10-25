@@ -1,13 +1,17 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { connectDb } from './users/database'; 
-
+import { createDataBase } from 'entity/database';
+import { Logger } from '@nestjs/common';
+import { dataSource } from 'entity/environment';
+// import { datasource } from 'entity/environment';
 
 async function bootstrap() {
-
-  await connectDb();
   const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 3000);
-
+  await dataSource.initialize();
+  await createDataBase().catch((e) => {
+    Logger.error(`Fail to create Database with error message,${e}`);
+    return e.message;
+  });
+  await app.listen(process.env.PORT ?? 5000);
 }
 bootstrap();
