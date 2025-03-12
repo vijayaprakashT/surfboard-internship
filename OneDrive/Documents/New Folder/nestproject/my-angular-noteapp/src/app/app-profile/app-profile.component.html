@@ -1,0 +1,20 @@
+<body>
+  <div class="profile-container">
+    <h2>User Info</h2>
+
+    <div class="profile-info" *ngIf="user">
+      <p><strong>User ID:</strong> {{ user.userId }}</p>
+      <p><strong>Name:</strong> {{ user.userName }}</p>
+      <p><strong>Role:</strong> {{ user.userRole }}</p>
+    </div>
+    
+    <div class="profile-buttons">
+      <button class="update-button">
+        <a href="http://localhost:4200/update">Update</a>
+      </button>
+      <button class="delete-button">
+        <a href="http://localhost:4200/delete">Delete</a>
+      </button>
+    </div>
+  </div>
+</body>

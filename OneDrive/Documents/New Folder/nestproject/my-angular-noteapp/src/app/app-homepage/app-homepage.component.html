@@ -1,0 +1,63 @@
+<body>
+  <div>
+    <!-- <div class="search-container">
+      <input type="search" id="search-input" placeholder="Search...">
+      <button id="search-button" (click)="search()">Search</button> -->
+
+      <div class="button-container">
+        <!-- <button id="notes-button"><a href="http://localhost:4200/notes">notes</a></button> -->
+        <!-- <button id="folder-button"><a href="http://localhost:4200/folder">Folder</a></button> -->
+        <button id="profile-button"><a href="http://localhost:4200/useraccess">profile</a></button>
+      </div>
+
+    <!-- </div> -->
+
+   
+    <!-- Add Note Section -->
+    <div class="add-note-container">
+      <p>{{ homepageForm.value.title ? 'Edit Note' : 'Add Note' }}</p> <!-- Dynamic form heading -->
+      
+      <form [formGroup]="homepageForm">
+        <div class="note-input-container">
+          <input type="text" id="title" class="input-box" placeholder="Add Title" formControlName="title">
+          <input type="text" id="description" class="input-box" placeholder="Add Description" formControlName="description">
+          <!-- <input type="text" id="foldername" class="input-box" placeholder="Folder Name" formControlName="folder"> -->
+        </div>
+        <button type="submit" class="add-note-button" (click)="onSubmit()">
+          {{ homepageForm.value.title ? 'Update Note' : 'Add Note' }} <!-- Dynamic button text -->
+        </button>
+      </form>
+    </div>
+    
+    <div class="notes-container">
+      <p>Added Notes</p>
+    
+      <div *ngIf="userNotes.length === 0">
+        <p>No notes available</p>
+      </div>
+    
+      <div *ngFor="let note of userNotes" class="square">
+        <h5>{{ note.title }}</h5>
+        <p>{{ note.description }}</p>  
+    
+        <div class="icons">
+          <button class="icon-button" (click)="pinNote(note)">
+            <span class="material-icons">push_pin</span>
+          </button>
+          <button class="icon-button" (click)="editNote(note)">
+            <span class="material-icons">edit</span>
+          </button>
+          <button class="icon-button" (click)="delNote(note)">
+            <span class="material-icons">delete</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</body>
+
+
+
+

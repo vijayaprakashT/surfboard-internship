@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="left-section">
+    <img src="https://www.pngitem.com/pimgs/m/25-255518_notes-icon-notes-app-icon-png-transparent-png.png" alt="Image">
+  </div>
+  <div class="right-section">
+    <div class="header">
+      <h2>Welcome to V-Note</h2>
+    </div>
+    <h1>Sign Up</h1>
+    <p>Create your account</p>
+
+    <form [formGroup]="signUpForm" (click)="onSubmit()">
+      <div class="form-group">
+        <label for="userName">Username</label>
+        <div class="input-wrapper">
+          <input type="text" id="userName" formControlName="userName" placeholder="Enter your username" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="userRole">role</label>
+        <div class="input-wrapper">
+          <input type="userRole" id="userRole" formControlName="userRole" placeholder="Enter your role" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="userEmail">Email</label>
+        <div class="input-wrapper">
+          <input type="email" id="userEmail" formControlName="userEmail" placeholder="Enter your email" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="userPassword">Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="userPassword" formControlName="userPassword" placeholder="Enter your password" required>
+          <a href="http://localhost:4200/update" class="forgot-password">Forgot Password?</a>
+        </div>
+      </div>
+      <button type="submit" class="signup-btn">sign up</button>
+
+      <p class="already-account">Already have an account? <a href="http://localhost:4200/login">Log In</a></p>
+    </form>
+  </div>
+</div>

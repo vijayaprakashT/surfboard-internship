@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh;
+  background-image: url('https://www.shutterstock.com/image-vector/abstract-blue-background-modern-simple-600nw-2474145007.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; /* Makes the background fixed while scrolling */
+}
+
+div {
+  box-sizing: border-box;
+}
+
+/* .search-container {
+  text-align: start; 
+  margin-bottom: 30px;
+} */
+
+
+/* #search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px; 
+  width: 500px;
+} */
+
+#search-button {
+  padding: 10px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px; 
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Add Note Section */
+.add-note-container {
+  text-align: start;
+  margin-bottom: 30px;
+  
+}
+
+.note-input-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 20px;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-box {
+  width: 250px; 
+  height: 50px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.add-note-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-note-button:hover {
+  background-color: #0056b3;
+}
+
+/* Added Notes Section */
+.notes-container {
+  text-align: start;
+  margin-top: 20px;
+}
+
+.square {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 300px;
+  height: 150px;
+  margin: 10px ; 
+  display: flex ;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+  position: relative; /* Adjusted to prevent overlap issues */
+}
+
+/* Icon Styling */
+/* .edit-icon,
+.delete-icon,
+.pin-icon{
+  cursor: pointer;
+  transition: fill 0.2s ease-in-out;
+  margin-left: 10px; 
+}
+.pin-icon:hover{
+  fill :black
+}
+.edit-icon:hover {
+  fill: #007bff;
+}
+.delete-icon:hover {
+  fill: #dc3545;
+}
+
+ */

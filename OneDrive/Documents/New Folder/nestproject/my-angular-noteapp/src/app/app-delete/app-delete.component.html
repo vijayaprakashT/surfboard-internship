@@ -1,0 +1,36 @@
+
+<body>
+    <form [formGroup]="deleteForm" (ngSubmit)="onSubmit()">
+    
+      <div class="container">
+        <div class="center">
+          <div class="header">
+            <h2>Are you sure want to delete the account?</h2>
+          </div>
+    
+          <div class="form-group">
+            <label for="userEmail">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="userEmail" formControlName="userEmail" placeholder="Enter your email" required/>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="userPassword">Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="userPassword" formControlName="userPassword" placeholder="Enter your password" required />
+              <a href="http://localhost:4200/update" class="forgot-password">Forgot Password?</a>
+            </div>
+          </div>
+              <button type="submit" class="delete-btn">delete account</button>
+        </div>
+      </div>
+    </form>
+  </body>
+  
+  
+    
+    
+  
+  
+     
